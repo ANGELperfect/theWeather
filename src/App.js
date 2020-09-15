@@ -21,7 +21,7 @@ class App extends Component {
     var cty = e.target.elements.city.value
     var cntry = e.target.elements.country.value
     if(cty && cntry){ 
-    var api = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cty},${cntry}&appid=${apiKey}&units=metric`)
+    var api = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cty},${cntry}&appid=${apiKey}&units=metric`)
     var data = await api.json()
     try{
     this.setState({
